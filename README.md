@@ -1,1 +1,1 @@
-# Here are the tasks and exercises of the JavaScript section of the SkillFactory "FrontEnd Developer" course
+# Here are the tasks and homework exercises of the JavaScript section of the SkillFactory "FrontEnd Developer" course
