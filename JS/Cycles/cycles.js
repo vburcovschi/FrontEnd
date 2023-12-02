@@ -48,7 +48,7 @@ if (criteria){
 не только числа, но и, например, знаки, null и так далее.
  */
 
-let myArray = [3,6,7,'uy',"a",7,4,null]
+/*let myArray = [3,6,7,'uy',"a",7,4,null]
 let countOdd = 0
 let countEven = 0
 
@@ -63,4 +63,12 @@ for (let i = 0; i <= myArray.length; i++) {
     }
 }
 
-console.log(`This array contains ${countEven} even numbers and ${countOdd} numbers`)
+console.log(`This array contains ${countEven} even numbers and ${countOdd} numbers`)*/
+
+let value = 5;
+while(value > 0) {
+    console.log(value);
+    if (value <= 3) {break;}
+            value -= 1;
+
+}
