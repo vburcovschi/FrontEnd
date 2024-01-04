@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel = "stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="form-group">
+    <div class="label-wrap">
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+    </div>
+    <div class="label-wrap">
+        <label for="age">Age:</label>
+        <input type="number" id="age">
+    </div>
+    <div class="label-wrap">
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+    </div>
+    <button onclick="convertToJSON()">Конвертируем в JSON</button>
+</div>
+<div class="json-wrap">
+    <h2>JSON:</h2>
+    <div id="result">
+    </div>
+</div>
+<script src="sript.js"></script>
+</body>
+</html>

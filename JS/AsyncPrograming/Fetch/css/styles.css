@@ -1,0 +1,40 @@
+.btn-wrap {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 10px;
+}
+
+.post {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.post h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.post p {
+    font-size: 14px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.btn:active {
+    background-color: #3e8e41;
+}
