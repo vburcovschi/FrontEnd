@@ -1,5 +1,6 @@
 import fetch from 'node-fetch';
-const URL = "https://jsonplaceholder.typicode.com/albums?_start=0&_limit=5";
+//const URL = "https://jsonplaceholder.typicode.com/albums?_start=0&_limit=5";
+const URL = "https://jsonplaceholder.typicode.com/users";
 let data;
 /*const fetchData = () =>{
     fetch(URL)
@@ -29,3 +30,23 @@ const getValues = (obj) => {
         console.log(values)
     })
 }
+
+
+async function fetchPosts(id) {
+    try {
+        let res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+
+        if (!res.ok) {
+            console.log(res.status)
+            throw new Error("Нет такого поста");
+
+        }
+        console.log(res.status)
+        let post = await res.json();
+        console.log(post);
+    } catch (e) {
+        console.log(e.message, "Отработал блок catch");
+    }
+}
+
+// fetchPosts(101);
