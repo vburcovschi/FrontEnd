@@ -1,0 +1,24 @@
+const input = document.querySelector("#input");
+const output = document.querySelector("#output");
+
+// const inputHandler = (e) => {
+//     output.textContent = e.target.value;
+// };
+//
+// input.oninput = inputHandler;
+
+/*const inputHandler = (e) => {
+    output.textContent = e.target.value;
+}
+input.addEventListener('input', inputHandler);*/
+
+
+const inputHandler = (e) => {
+    if (e.target.value.length < 8) {
+        output.textContent = "Предупреждение: некорректное значение";
+    } else {
+        output.textContent = "Значение корректно";
+    }
+};
+
+input.addEventListener('input', inputHandler);

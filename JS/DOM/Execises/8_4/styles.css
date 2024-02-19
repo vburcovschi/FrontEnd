@@ -1,0 +1,15 @@
+.container {
+    margin: 20px;
+}
+
+#input {
+    width: 200px;
+    padding: 0.5em;
+    border-radius: 20px;
+    border: 2px solid green;
+}
+
+#output {
+    font-weight: 500;
+    color: darkgreen;
+}
