@@ -1,0 +1,43 @@
+.gallery {
+    display: flex;
+    justify-content: center;
+}
+
+.images-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    width: 100%;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 400px;
+    height: 200px;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.like-button {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    display: block;
+    padding: 5px 10px;
+    background-color: #ccc;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+.liked {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+img.liked {
+    outline: 6px dotted pink;
+}
