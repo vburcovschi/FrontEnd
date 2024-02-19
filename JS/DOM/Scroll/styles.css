@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 2em;
+    font-family: helvetica, sans-serif;
+    font-size: 24px;
+}
+
+.scroll-up,
+.scroll-down {
+    display: none;
+    position: fixed;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-image: url("https://cdn-icons-png.flaticon.com/512/156/156330.png");
+    background-size: contain;
+}
+.scroll-up {
+    bottom: 70px;
+}
+.scroll-down {
+    bottom: 20px;
+    transform: rotate(180deg);
+}
+.content {
+    line-height: 50px;
+    height: 2000px;
+}
