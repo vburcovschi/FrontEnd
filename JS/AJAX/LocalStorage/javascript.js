@@ -1,4 +1,4 @@
-// Получаем данные по ключу myKey в localStorage
+/*// Получаем данные по ключу myKey в localStorage
 let myKey = localStorage.getItem('myKey');
 
 // Если localStorage очищался, то ключа не будет.
@@ -16,10 +16,10 @@ const jsonString = `
 `;
 
 // Запишем данные в localStorage в виде JSON
-localStorage.setItem('myJSON', jsonString);
+localStorage.setItem('myJSON', jsonString);*/
 
 
-// Получаем данные по ключу myKey в localStorage
+/*// Получаем данные по ключу myKey в localStorage
 myKey = localStorage.getItem('myKey');
 console.log('2. myKey', myKey);
 
@@ -37,7 +37,7 @@ console.log('4. myKey', localStorage.getItem('myKey'));
 console.log('5. myJSON', localStorage.getItem('myJSON'));
 
 // Очищаем весь localStorage
-localStorage.clear();
+localStorage.clear();*/
 
 // Проверяем, что все удалено
 console.log('6. myKey', localStorage.getItem('myKey'));
