@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    padding: 10px 20px;
+    border: 1px solid #000;
+}
+th{
+    padding: 10px 20px;
+    border: 1px solid #000;
+    background: #4CAF50;
+}
+tr:nth-child(odd) {
+    background-color: lightgreen;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
