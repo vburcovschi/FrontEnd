@@ -22,3 +22,5 @@ myPromise
     .finally(() => {
         console.log('Выполняется всегда');
     });
+
+
