@@ -4,38 +4,40 @@ const inputLimit = document.querySelector('#limitInput');
 const button = document.querySelector('button');
 let output = document.querySelector('#output');
 
+const myCash = localStorage.getItem('cash');
+if (myCash) {
+    console.log('Reading localStorage ', JSON.parse(myCash));
+    displayData(JSON.parse(myCash));
+}
+
 // Adaugam lista imaginea in pagina
 button.addEventListener('click', () => {
     const page = parseInt(inputPage.value, 10);
     const limit = parseInt(inputLimit.value, 10);
-    switch (true){
-        case ((page<1 || page>10)) && (limit<1 || limit>10) || isNaN(page) && isNaN(limit):
-            output.textContent = 'Номер страницы и лимит вне диапазона от 1 до 10';
+    switch (true) {
+        case ((page < 1 || page > 10)) && (limit < 1 || limit > 10) || isNaN(page) && isNaN(limit):
+            output.textContent = 'Numărul paginii și limita în afara intervalului de la 1 la 10';
             return
-        case (page<1 || page>10) || isNaN(page):
-            output.textContent = 'Номер страницы вне диапазона от 1 до 10';
+        case (page < 1 || page > 10) || isNaN(page):
+            output.textContent = 'Numărul paginii nu este în intervalul de la 1 la 10';
             return
-        case (limit<1 || limit>10) || isNaN(limit):
-            output.textContent = 'Лимит вне диапазона от 1 до 10';
+        case (limit < 1 || limit > 10) || isNaN(limit):
+            output.textContent = 'Limită în afara intervalului de la 1 la 10';
             return
         default:
             const url = `https://jsonplaceholder.typicode.com/photos?_page=${page}&_limit=${limit}`;
-            console.log(url);
             fetch(url)
                 .then(response => {
                     if (!response.ok) {
-                        throw new Error("Network response was not ok");
+                        throw new Error("Răspunsul rețelei nu a fost ok");
                     }
                     return response.json();
                 })
                 .then(data => {
                     output.innerHTML = "<br>";
-                    console.log(data);
-                    data.forEach(photo => {
-                        const imageElement = document.createElement("img");
-                        imageElement.src = photo.url;
-                        output.appendChild(imageElement)
-                    });
+                    localStorage.setItem('cash', JSON.stringify(data));
+                    console.log('Setting localStorage', JSON.parse(localStorage.getItem('cash')));
+                    displayData(data);
                 })
                 .catch(error => {
                     console.log('Erroare la incarcarea datelor!', error);
@@ -43,3 +45,11 @@ button.addEventListener('click', () => {
                 });
     }
 });
+
+function displayData(data) {
+    data.forEach(photo => {
+        const imageElement = document.createElement("img");
+        imageElement.src = photo.url;
+        output.appendChild(imageElement)
+    });
+}
