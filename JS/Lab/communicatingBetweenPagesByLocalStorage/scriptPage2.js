@@ -1,12 +1,12 @@
-let sectionID = localStorage.getItem('showedSection');
+let sectionClassName = localStorage.getItem('showedSection');
 
-function showSection(sectionID) {
-    let sections = document.getElementsByClassName(sectionID);
+function showSection(sectionClassName) {
+    let sections = document.getElementsByClassName(sectionClassName);
     for (let section of sections) {
         section.style.display = 'block';
     }
 }
 
 window.onload = function() {
-    showSection(sectionID);
+    showSection(sectionClassName);
 }
