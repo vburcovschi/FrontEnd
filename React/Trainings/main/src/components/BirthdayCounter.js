@@ -14,15 +14,9 @@ class BirthdayCounter extends React.Component {
     componentDidMount() {
         this.interval = setInterval(() => {
             const { birthdayDate } = this.props;
-            //const birthdayDate = new Date('1976-10-26');
-
             if (birthdayDate) {
                 const currentDate = new Date();
-                console.log(currentDate);
-                console.log(birthdayDate);
                 const difference = birthdayDate.getTime() - currentDate.getTime();
-                console.log(difference);
-
                 if (difference <= 0) {
                     this.setState({ isInFuture: false });
                     clearInterval(this.interval);
@@ -37,9 +31,9 @@ class BirthdayCounter extends React.Component {
             }
         }, 1000);
     }
-    componentWillUnmount() {
+/*    componentWillUnmount() {
         clearInterval(this.interval);
-    }
+    }*/
     render() {
         const { days, hours, minutes, seconds, isInFuture } = this.state;
         return (
