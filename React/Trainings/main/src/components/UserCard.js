@@ -15,7 +15,7 @@ class UserCard extends React.Component {
         const {name, email, avatar} = this.props;
         return (
             <div className="card">
-                <img src={avatar} alt="User Avatar" className="avatar" />
+                <img src={avatar} alt="User Avatar" className="avatar" width="30px" height="30px" />
                 <div className="card-data">
                     <h2 className="name">{name}</h2>
                     <p className="email">Email: {email}</p>
