@@ -5,6 +5,7 @@ import LikeButton from "./components/LikeButton";
 import UserCard from "./components/UserCard";
 import EmailSend from "./components/EmailSend";
 import SearchBox from "./components/SearchBox";
+import BirthdayCounter from "./components/BirthdayCounter";
 
 function App() {
   const orderList = [
@@ -21,7 +22,10 @@ function App() {
         ];
 
     const items = ['apple', 'pineapple', 'orange', 'apricot', 'lime', 'lemon', 'plum'];
-  return (
+
+    const birthdayDate = new Date('2024-10-26');
+
+    return (
     <div className="App">
        <Message name={'Vitalie'} />
         <List orderList={orderList} />
@@ -30,6 +34,8 @@ function App() {
         <UserCard name={user[1].name} email={user[1].email} avatar={user[1].avatarUrl} />
         <EmailSend />
         <SearchBox items={items}/>
+        {/*<BirthdayCounter />*/}
+        <BirthdayCounter birthdayDate = {birthdayDate}/>
         {/*<img src='https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50' alt="User Avatar"></img>*/}
     </div>
   );
