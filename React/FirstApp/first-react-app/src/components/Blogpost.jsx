@@ -8,7 +8,7 @@ class Blogpost extends React.Component {
     }
 
     render() {
-        const {titleBlog}= this.props;
+            const {titleBlog}= this.props;
     return (
       <div>
           <Title titleText={titleBlog} />
