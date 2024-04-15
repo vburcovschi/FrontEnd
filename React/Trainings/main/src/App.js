@@ -6,6 +6,7 @@ import UserCard from "./components/UserCard";
 import EmailSend from "./components/EmailSend";
 import SearchBox from "./components/SearchBox";
 import BirthdayCounter from "./components/BirthdayCounter";
+import Convertor from "./components/Convertor";
 
 function App() {
   const orderList = [
@@ -27,16 +28,17 @@ function App() {
 
     return (
     <div className="App">
-       <Message name={'Vitalie'} />
-        <List orderList={orderList} />
-        <LikeButton initialLikeNumber={0} />
-        <UserCard name={user[0].name} email={user[0].email} avatar={user[0].avatarUrl} />
-        <UserCard name={user[1].name} email={user[1].email} avatar={user[1].avatarUrl} />
-        <EmailSend />
-        <SearchBox items={items}/>
+      {/* <Message name={'Vitalie'} />*/}
+       {/* <List orderList={orderList} />*/}
+        {/*<LikeButton initialLikeNumber={0} />*/}
+      {/*  <UserCard name={user[0].name} email={user[0].email} avatar={user[0].avatarUrl} />
+        <UserCard name={user[1].name} email={user[1].email} avatar={user[1].avatarUrl} />*/}
+       {/* <EmailSend />*/}
+       {/* <SearchBox items={items}/>*/}
         {/*<BirthdayCounter />*/}
-        <BirthdayCounter birthdayDate = {birthdayDate}/>
+       {/* <BirthdayCounter birthdayDate = {birthdayDate}/>*/}
         {/*<img src='https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50' alt="User Avatar"></img>*/}
+        <Convertor />
     </div>
   );
 }
