@@ -119,3 +119,19 @@ button {
     right: 0px;
     font-size: 32px;
 }
+
+.item-container {
+    margin-bottom: 10px;
+}
+
+.item-checkbox {
+    margin-right: 5px;
+}
+
+.item-label {
+    text-decoration: none;
+}
+
+.item-label.completed {
+    text-decoration: line-through;
+}

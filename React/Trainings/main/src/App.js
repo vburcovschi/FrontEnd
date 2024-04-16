@@ -7,6 +7,8 @@ import EmailSend from "./components/EmailSend";
 import SearchBox from "./components/SearchBox";
 import BirthdayCounter from "./components/BirthdayCounter";
 import Convertor from "./components/Convertor";
+import Profile from "./components/Profile";
+import ListToDo from "./components/ToDo/ListToDo";
 
 function App() {
   const orderList = [
@@ -38,7 +40,9 @@ function App() {
         {/*<BirthdayCounter />*/}
        {/* <BirthdayCounter birthdayDate = {birthdayDate}/>*/}
         {/*<img src='https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50' alt="User Avatar"></img>*/}
-        <Convertor />
+        {/*<Convertor />*/}
+        {/*<Profile />*/}
+        <ListToDo />
     </div>
   );
 }
